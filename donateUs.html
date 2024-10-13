@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Flowers</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c2c2c;
+            /* Dark background */
+            color: #e0e0e0;
+            /* Light text for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            /* margin: 50px auto; */
+            margin-top: 110px;
+            margin-left: 237px;
+            background: #1f1f1f;
+            /* Darker container background */
+            padding: 30px;
+            border-radius: 15px;
+            /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); */
+            box-shadow: 0 0 1rem rgb(81, 169, 176);
+            /* Softer shadow */
+            text-align: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+
+        .container.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        section {
+            display: flex;
+        }
+
+        .logo {
+            cursor: pointer;
+            padding-top: 16px;
+        }
+
+        .logoImg {
+            width: 82px;
+            height: 86px;
+            padding-left: 50px;
+            padding-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #76c7c0;
+            /* Vibrant header color */
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            color: #76c7c0;
+            /* Consistent sub-header color */
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #b0b0b0;
+            /* Softer gray for paragraph text */
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            margin: 10px 5px;
+            border: none;
+            background: #76c7c0;
+            /* Button color */
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            /* Softer shadow */
+        }
+
+        button:hover {
+            background: #3f938f;
+            /* Slightly lighter button on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        form.show {
+            display: block;
+            opacity: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #e0e0e0;
+            /* Consistent label color */
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            /* Lighter border */
+            border-radius: 5px;
+            font-size: 16px;
+            background: #2a2a2a;
+            /* Dark input background */
+            color: #e0e0e0;
+            /* Light text */
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus {
+            border: 1px solid #76c7c0;
+            /* Highlight color on focus */
+            box-shadow: 0 0 5px rgba(118, 199, 192, 0.5);
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background: #38a169;
+            /* Different button color */
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background: #37925d;
+            /* Hover effect for submit button */
+        }
+
+        .note {
+            font-size: 14px;
+            color: #bbb;
+            /* Softer note color */
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Media Query for Responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h2,
+            h3 {
+                font-size: 24px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="logo">
+            <a href="index.html"><img src="images/logoIMg.png" alt="" class="logoImg">
+                <img class="logo" src="Images/Component 2.png" alt=""></a>
+        </div>
+
+        <div class="container" id="container">
+            <h2>Donate Flowers to Us</h2>
+
+            <p>We welcome your contribution. Are you an organization (Temple) or a common person?</p>
+
+            <button onclick="showForm('organization')">I am an Organization (Temple)</button>
+            <button onclick="showForm('user')">I am a Common Person</button>
+
+            <!-- Form for Organizations (Temples) -->
+            <form id="organizationForm" onsubmit="submitForm(event, 'organization')">
+                <h3>Organization Donation Form</h3>
+                <label for="orgName">Organization Name:</label>
+                <input type="text" id="orgName" name="orgName" placeholder="Enter temple/organization name" required
+                    autocomplete="organization-name">
+
+                <label for="orgEmail">Email:</label>
+                <input type="email" id="orgEmail" name="orgEmail" placeholder="Enter your email" required
+                    autocomplete="email">
+
+                <label for="orgFlowers">How many flowers can you donate per month?</label>
+                <input type="number" id="orgFlowers" name="orgFlowers" placeholder="Number of flowers (approx.)"
+                    required autocomplete="off">
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Form for Common People -->
+            <form id="userForm" onsubmit="submitForm(event, 'user')">
+                <h3>User Donation Form</h3>
+                <label for="userName">Full Name:</label>
+                <input type="text" id="userName" name="userName" placeholder="Enter your full name" required
+                    autocomplete="name">
+
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="Enter your email" required
+                    autocomplete="email">
+
+                <label for="userFlowers">How many flowers can you donate (one-time)?</label>
+                <input type="number" id="userFlowers" name="userFlowers" placeholder="Number of flowers (approx.)"
+                    required autocomplete="off">
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <p class="note">Your donations help us create eco-friendly products and reduce floral waste.</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('container');
+            container.classList.add('show'); // Show container on load
+        });
+
+        function showForm(type) {
+            const orgForm = document.getElementById('organizationForm');
+            const userForm = document.getElementById('userForm');
+
+            orgForm.classList.remove('show');
+            userForm.classList.remove('show');
+
+            if (type === 'organization') {
+                orgForm.classList.add('show');
+            } else {
+                userForm.classList.add('show');
+            }
+        }
+
+        function submitForm(event, type) {
+            event.preventDefault();
+            alert(`Form submitted for ${type === 'organization' ? 'Organization' : 'User'}`);
+            // Here you would add your form submission logic
+        }
+    </script>
+
+</body>
+
+</html>

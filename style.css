@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c;
+    scroll-behavior: smooth;
+    color: #edf0f1;
+}
+
+li,
+a,
+button {
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+    padding-top: 16px;
+}
+
+.navLinks {
+    list-style: none;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+.navLinks li a {
+    transition: all 0.7s ease-in-out 0s;
+
+}
+
+.navLinks li a:hover {
+    color: rgb(50, 118, 135);
+}
+
+.cta {
+    padding: 9px 25px;
+    background-color: rgb(18, 59, 123, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.logoImg {
+    width: 82px;
+    height: 86px;
+    margin-bottom: 10px;
+}
+
+
+.motto {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 3em;
+}
+
+
+.highlighted {
+    /* background-image: linear-gradient(to right, #77A1D3, #79CBCA, #E684AE); */
+    background-image: linear-gradient(to right, #3c35fc, #bf0a0a);
+    border-radius: 10px;
+    padding: 3px 4px;
+}
+
+
+
+.magneto {
+    margin: 0 45rem;
+    margin-left: 50rem;
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(18, 59, 123, 1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.text {
+    background-color: rgb(18, 59, 123, 1);
+    color: white;
+}
+
+.flower {
+    margin-left: 364px;
+    margin-top: 74px;
+    animation: floatImage 3.5s ease-in-out infinite;
+}
+
+
+.flower2 {
+    margin-bottom: 18px;
+    margin-left: 29em;
+    animation: floatImageX 3.5s ease-in-out infinite;
+}
+
+
+
+
+.flower3 {
+    margin-left: 29em;
+    animation: floatImage 3.5s ease-in-out infinite;
+}
+
+.flower4 {
+    margin-left: 31em;
+    animation: floatImageX 3.5s ease-in-out infinite;
+
+}
+
+#aim {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 40px;
+}
+
+.aimContent .head {
+    font-size: 3em;
+    padding-bottom: 100px;
+    padding-left: 50px;
+}
+
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatImageX {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.aimImg {
+    height: 35em;
+    width: 29em;
+    border-radius: 5rem;
+    animation: floatImage 4s ease-in-out infinite;
+    margin-right: 9em;
+    box-shadow: 0 0 1rem rgb(81, 169, 176);
+}
+
+.aimCt {
+    display: flex;
+}
+
+.aimtext {
+    font-size: 1.7rem;
+    padding-top: 100px;
+}
+
+#working {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.workHead {
+    font-size: 1.7rem;
+    padding-top: 100px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+.workCt {
+    display: flex;
+}
+
+.images {
+    width: 19em;
+    height: 16em;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    border-radius: 100px;
+}
+
+.Fastimages {
+    width: 6em;
+    height: 7em;
+    margin: 193px 45px;
+    border-radius: 100px;
+    animation: floatImageX 4s ease-in-out infinite;
+}
+
+#working p {
+    font-size: 1.3rem;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 16px;
+    right: 32px;
+    z-index: 500;
+    background-color: rgba(0, 136, 169, 1);
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.gotopbtn i {
+    background-color: rgba(0, 136, 169, 1);
+}
+
+
+/* .gotopbtn img {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    bottom: 56px;
+    right: 64px;
+    z-index: 501;
+    background-color: rgba(0, 136, 169, 1);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    } */
+
+.gotopbtn :hover {
+    box-shadow: 0 0 2rem rgb(64, 206, 216);
+}
+
+.gotopbtn.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#products {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.productHead {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+}
+
+.productsCt h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.productsCt a {
+    text-decoration: none;
+}
+
+
+.productsCt {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+
+.content {
+    width: 22%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.27);
+    transition: 0.4s;
+    background-color: #2c2c2c;
+
+}
+
+
+.productsCt :hover {
+    box-shadow: 0 0 1rem rgb(81, 169, 176);
+    transform: translateY(-8px);
+}
+
+
+.productsCt img {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 10px;
+}
+
+
+
+.productsCt p {
+    text-align: center;
+    color: #b2bec3;
+    padding-bottom: 10px;
+    padding-top: 0 8px;
+    padding-bottom: 15px;
+}
+
+.productsCt button {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.buy1 {
+    background-color: #3950f3;
+}
+
+.buy2 {
+    background-color: #1f00ff;
+}
+
+.buy3 {
+    background-color: #5baa17;
+}
+
+.buy4 {
+    background-color: #cf1313;
+}
+
+#companyForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 710px;
+    color: #fff;
+    padding: 20px 40px;
+    border: 2px solid rgb(39, 119, 211);
+    border-radius: 50px;
+    box-shadow: 0 0 1rem rgb(81, 169, 176);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .inputBox {
+    width: 100%;
+    height: 50px;
+}
+
+.flex {
+    display: flex;
+}
+
+#company {
+    margin: 30px 0px;
+}
+
+#mob {
+    margin: 30px 0px;
+}
+
+#email {
+    margin: 30px 0px;
+}
+
+#web {
+    margin: 30px 0px;
+}
+
+#monthly {
+    padding-left: 15px;
+}
+
+#op {
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.inputBox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px
+}
+
+.inputBox input::placeholder {
+    color: #fff;
+}
+
+.selectBtn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 0 1rem #6e93f7;
+}
+
+.selectBtn .btnText {
+    font-size: 17px;
+    background-color: #fff;
+    color: #333;
+}
+
+.selectBtn .arrowDwn {
+    display: flex;
+    height: 21px;
+    width: 21px;
+    background: #6e93f7;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.arrowDwn i {
+    background-color: #6e93f7;
+}
+
+.selectBtn.open .arrowDwn {
+    transform: rotate(-180deg);
+}
+
+.listItems {
+    position: relative;
+    margin-top: 15px;
+    background: #fff;
+    box-shadow: 0 0 1rem #6e93f7;
+    border-radius: 8px;
+    padding: 16px;
+    display: none
+}
+
+
+.selectBtn.open~.listItems {
+    display: block;
+}
+
+.listItems .items {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0px 15px;
+}
+
+.listItems .items :hover {
+    background-color: #e7edfe;
+}
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border: 2px solid #333;
+    margin-right: 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox .check-icon {
+    color: #ffffff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: .3s ease-in-out;
+}
+
+.items .itemText {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.items.checked .check-icon {
+    transform: scale(1);
+
+}
+
+.wrapper .btn {
+    width: 20%;
+    height: 45px;
+    background-color: rgb(22, 88, 193);
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 1rem #6e93f7;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 20px 248px;
+}
+
+.wrapper.btn :hover {
+    background-color: rgba(0, 136, 169, 0.7);
+    box-shadow: 0 0 1rem rgb(81, 169, 176);
+}
+
+.cta:hover {
+    background-color: rgba(0, 136, 169, 0.7);
+    box-shadow: 0 0 1rem rgb(81, 169, 176);
+}
+
+.wrapper p {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 54vh;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #3586ff;
+    height: 100px;
+    padding: 94px 50px;
+    flex-direction: column;
+}
+
+footer .socialIcons,
+footer .menu {
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+}
+
+footer .socialIcons li,
+footer .menu li {
+    list-style: none;
+    color: #fff;
+    background-color: #3586ff;
+}
+
+footer .socialIcons li a {
+    font-size: 2em;
+    margin: 0 20px;
+    color: #fff;
+    display: inline-block;
+    background-color: #3586ff;
+    transition: all 0.4s ease-in-out;
+}
+
+footer .socialIcons li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .socialIcons li a i {
+    background-color: #3586ff;
+    color: #fff;
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #3586ff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: all 0.5s ease;
+}
+
+footer .menu li :hover {
+    opacity: 1;
+    color: #141414;
+}
+
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #3586ff;
+    margin-bottom: 10px;
+    font-size: 1.7em;
+    opacity: 0.85;
+}
+
+footer p i {
+    background-color: #3586ff;
+    color: #fff;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(Images/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .waves #wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWav 4s linear infinite;
+}
+
+footer .waves #wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWav2 4s linear infinite;
+}
+
+footer .waves #wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWav 3s linear infinite;
+}
+
+footer .waves #wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWav2 3s linear infinite;
+}
+
+@keyframes animateWav {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWav2 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999;
+    /* so that it stays on top of all other elements */
+}
